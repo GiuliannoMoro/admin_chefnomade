@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Painel · Chef Nômade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div id="cabecalho-painel" hidden>
+    <header class="topo">
+      <a href="#/pedidos" class="marca" aria-label="Chef Nômade — painel">
+        <span class="marca-chef">CHEF</span>
+        <span class="marca-nome">NÔMADE <span class="selo-painel">PAINEL</span></span>
+      </a>
+      <div class="usuario">
+        <span id="nome-admin"></span>
+        <button type="button" class="btn-topo" id="btn-sair">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11" /></svg>
+          <span>Sair</span>
+        </button>
+      </div>
+    </header>
+    <nav class="abas" aria-label="Seções do painel">
+      <a href="#/pedidos" data-secao="pedidos">Pedidos <span class="badge" id="badge-novos" hidden>0</span></a>
+      <a href="#/comandas" data-secao="comandas">Comandas</a>
+      <a href="#/cardapio" data-secao="cardapio">Cardápio</a>
+    </nav>
+  </div>
+
+  <main id="app" tabindex="-1">
+    <p class="estado">Carregando…</p>
+  </main>
+
+  <div class="sobreposicao" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo"></div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
